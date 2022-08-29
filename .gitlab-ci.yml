@@ -1,0 +1,9 @@
+stages:
+  - test
+
+tests:
+  stage: test
+  tags: 
+    - ios
+  script:
+    - ./run-tests.sh
