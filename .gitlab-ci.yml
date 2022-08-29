@@ -6,4 +6,9 @@ tests:
   tags: 
     - ios
   script:
-    - ./run-tests.sh
+    - echo -e "\e[0Ksection_start:`date +%s`:test_macos\r\e[0KRun tests on macOS"
+    - ./run-tests.sh macos
+    - echo -e "\e[0Ksection_end:`date +%s`:test_macos\r\e[0K"
+    - echo -e "\e[0Ksection_start:`date +%s`:test_macos\r\e[0KRun tests on iOS Simulator"
+    - ./run-tests.sh ios
+    - echo -e "\e[0Ksection_end:`date +%s`:test_macos\r\e[0K"
